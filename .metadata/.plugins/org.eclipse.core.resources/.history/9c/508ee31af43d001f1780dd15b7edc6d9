@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+  <beans xmlns="http://www.springframework.org/schema/beans"
+   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+   xsi:schemaLocation=
+    "http://www.springframework.org/schema/beans 
+     http://www.springframework.org/schema/beans/spring-beans-4.0.xsd  
+     http://www.springframework.org/schema/context 
+     http://www.springframework.org/schema/context/spring-context-4.0.xsd" 
+   xmlns:context="http://www.springframework.org/schema/context">
+
+
+    <context:annotation-config />
+    <!-- bean definitions here -->
+    <bean id="sim" class="com.seleniumexpress.ioc.Vodafone"/>
+    
+     
+    <bean id="mathCheatObj" class="com.seleniumexpress.di.MathCheat"/>
+    <bean id="scienceCheatObj" class="com.seleniumexpress.di.ScienceCheat"/>
+    
+	<bean id="student" class="com.seleniumexpress.di.Student">
+		<!-- Setter based dependency injection -->
+		<property name="name" value="Sanket Aochar" />
+		<property name="rollno" value="1001" />
+		<property name="cheat" ref="scienceCheatObj"/>
+		
+	</bean>
+   
+    
+    <bean id="human" class="com.seleniumexpress.autowired.Human" />
+    
+    <!-- Instead of configuring autowire="" in .xml , let's used @Autowired annotation instead.
+        
+        @Autowired byName means Dependency variable name & bean id should be same 
+       <bean id="heart" class="com.seleniumexpress.autowired.Heart"/>   
+       
+         @Autowired byType type of variable & type of bean class should be same -->   
+    <bean id="heartObj"  class="com.seleniumexpress.autowired.Heart" />
+    
+
+</beans>

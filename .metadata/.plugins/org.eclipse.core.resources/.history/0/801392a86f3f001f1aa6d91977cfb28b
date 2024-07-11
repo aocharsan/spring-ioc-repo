@@ -1,0 +1,12 @@
+package com.seleniumexpress.beancycle;
+
+public class Test {
+
+	public static void main(String[] args) {
+
+    StudentDAO dao=new StudentDAO();
+    dao.selectAllRows();
+
+	}
+
+}

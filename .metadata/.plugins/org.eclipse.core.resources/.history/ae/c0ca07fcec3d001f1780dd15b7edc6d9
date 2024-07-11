@@ -1,0 +1,5 @@
+package com.seleniumexpress.autowired;
+
+public class Human {
+
+}

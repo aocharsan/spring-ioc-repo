@@ -1,0 +1,27 @@
+package lambdaByJava8;
+
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
+import java.util.List;
+
+public class MyClass {
+	
+	public static void main(String[] args) {
+		
+		List<Integer> list=new ArrayList<>();
+		list.add(56);
+		list.add(6);
+		list.add(87);
+		list.add(53);
+		list.add(44);
+		list.add(97);
+		
+		Collections.sort(list);
+		System.out.println(list);
+		
+		
+	}
+	
+
+}

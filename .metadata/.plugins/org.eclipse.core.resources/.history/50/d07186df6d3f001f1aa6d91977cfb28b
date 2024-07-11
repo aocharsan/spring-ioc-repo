@@ -1,0 +1,10 @@
+package com.seleniumexpress.beancycle;
+
+import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.PropertySource;
+
+@Configuration
+@PropertySource(value = "classpath:mysql-configuration-credentials.properties")
+public class StudentConfig {
+
+}

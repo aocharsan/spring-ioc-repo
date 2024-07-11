@@ -1,0 +1,21 @@
+package com.seleniumexpress.autowired;
+
+public class Human {
+	
+	private Heart heart;
+
+	public void setHeart(Heart heart) {
+		System.out.println("setter mehod being called........");
+		this.heart = heart;
+	}
+	
+	public void startPumping() {
+		if(heart !=null) {
+			heart.pump();
+		}
+		else {
+			System.out.println("You are no longer alive !");
+		}
+	}
+
+}

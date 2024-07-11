@@ -1,0 +1,44 @@
+package com.seleniumexpress.beancycle;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.Statement;
+
+import org.springframework.beans.factory.annotation.Value;
+
+public class StudentDAO {
+
+	@Value("${}")
+	String driver;
+	@Value("${}")
+	String url;
+	@Value("${}")
+	String user;
+	@Value("${}")
+	String password;
+
+	public void selectAllRows() {
+
+		try(Connection conn = DriverManager.getConnection(url, user, password);
+				Statement stmt = conn.createStatement();
+				ResultSet rs = stmt.executeQuery("SELECT * FROM xyz_company.student_table")) {
+
+			while (rs.next()) {
+				int stuId = rs.getInt(1);
+				int stuAge = rs.getInt(2);
+				String stuDept = rs.getString(3);
+				String stuName = rs.getString(4);
+				
+				System.out.println(stuId+"  "+stuAge+"  "+stuDept+"  "+stuName);
+			}
+			
+		
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+
+	}
+
+};

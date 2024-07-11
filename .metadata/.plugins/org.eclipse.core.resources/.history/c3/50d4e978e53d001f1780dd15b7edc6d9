@@ -1,0 +1,26 @@
+package com.seleniumexpress.di;
+
+public class Student {
+
+	private String name;
+	private int rollno;
+	private MathCheat mathCheat;
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public void setRollno(int rollno) {
+		this.rollno = rollno;
+	}
+
+	public void setMathCheat(MathCheat mathCheat) {
+		this.mathCheat = mathCheat;
+	}
+
+	public void getCheat() {
+		System.out.println("Student name is : " + name + " and roll no : " + rollno);
+		this.mathCheat.mathCheating();
+	}
+
+}

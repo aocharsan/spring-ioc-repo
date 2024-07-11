@@ -1,0 +1,20 @@
+package com.seleniumexpress.ioc;
+
+public class Airtel implements Sim{
+
+	public Airtel() {
+		System.out.println("airtel constructor called by ApplicationContext");
+	}
+	@Override
+	public void calling() {
+	System.out.println("Calling from airtel sim");
+		
+	}
+
+	@Override
+	public void data() {
+	System.out.println("Browsing internet using airtel sim");
+		
+	}
+
+}

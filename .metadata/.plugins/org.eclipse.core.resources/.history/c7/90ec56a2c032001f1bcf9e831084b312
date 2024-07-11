@@ -1,0 +1,23 @@
+package lambdaByJava8;
+
+import java.util.function.Predicate;
+
+public class MyClass {
+	
+	public static void main(String[] args) {
+		
+	Predicate<Integer> salarygtOneK= x-> x>1000;
+	salarygtOneK.test(200);
+	
+	Predicate<String> startWithS= x -> x.toLowerCase().charAt(0)=='s';
+	Predicate<String> startWithT= x -> x.toLowerCase().charAt(x.length()-1)=='t';
+	
+	System.out.println(startWithS.test("Sanket"));
+	
+	
+		
+		
+	}
+	
+
+}

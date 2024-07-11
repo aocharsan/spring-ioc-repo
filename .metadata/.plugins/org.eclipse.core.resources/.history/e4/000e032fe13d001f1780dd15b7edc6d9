@@ -1,0 +1,9 @@
+package com.seleniumexpress.di;
+
+public class MathCheat {
+
+	public void mathCheating() {
+		
+		System.out.println("Math cheating started successfully......");
+	}
+}

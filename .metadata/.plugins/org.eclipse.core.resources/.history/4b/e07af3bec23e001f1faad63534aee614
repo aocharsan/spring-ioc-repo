@@ -1,0 +1,10 @@
+package com.seleniumexpress.annotations;
+
+//@Component
+public class Principal {
+
+	public void getPrincipalInfo() {
+		System.out.println("hello , I am your principal : James Bond");
+	}
+	
+}

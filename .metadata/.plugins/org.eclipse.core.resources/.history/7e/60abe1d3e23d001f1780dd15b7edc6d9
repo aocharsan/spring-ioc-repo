@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- bean definitions here -->
+    <bean id="sim" class="com.seleniumexpress.ioc.Vodafone"></bean>
+	<bean id="student" class="com.seleniumexpress.di.Student">
+		<!-- Setter based dependency injection -->
+		<property name="name" value="Sanket Aochar" />
+		<property name="rollno" value="1001" />
+		<property name="mathCheat" ref="mathcheat"/>
+		
+	</bean>
+    
+    <bean id="mathcheat" class="com.seleniumexpress.di.MathCheat"/>
+
+</beans>

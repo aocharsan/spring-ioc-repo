@@ -1,0 +1,11 @@
+package com.seleniumexpress.annotations;
+
+public class ScienceTeacher implements Teacher {
+
+	@Override
+	public void teach() {
+	System.out.println("Hello, I'm your science teacher : Rahul Mande");
+		
+	}
+
+}

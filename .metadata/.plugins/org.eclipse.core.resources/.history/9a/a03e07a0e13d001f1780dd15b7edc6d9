@@ -1,0 +1,19 @@
+package com.seleniumexpress.di;
+
+public class Student {
+	
+	private String name;
+	private int rollno;
+	
+	public void setName(String name) {
+		this.name = name;
+	}
+	public void setRollno(int rollno) {
+		this.rollno = rollno;
+	}
+	
+	public void getStudentInfo() {
+		System.out.println("Student name is : "+name +" and roll no : "+rollno);
+	}
+
+}

@@ -1,0 +1,19 @@
+package lambdaByJava8;
+
+import java.util.Arrays;
+import java.util.List;
+
+public class MyClass {
+	
+	public static void main(String[] args) {
+		
+	     List<String> students=Arrays.asList("Ram","Abhay","Eagt","Amrendra");
+	     students.forEach(null);
+
+	}
+	private static void printAll(String s) {
+		System.out.println(s);
+		
+	}
+
+}
